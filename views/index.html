@@ -10,12 +10,8 @@
     <link rel="stylesheet" href="./public/style.css">
   </head>
   <body>
-    <header>
-      <h1>
-        ISQA_5 - Nasdaq Stock Price Checker
-      </h1>
-    </header>
-    <div id='userstories' style='margin-left: 5%; margin-top: 5%'>
+    <div class="user-stories"  id='userstories'>
+      <div class="user-stories-inner">
       <h3>User Stories</h3>
       <ol>
         <li>Set the content security policies to only allow loading of scripts and css from your server.</li>
@@ -34,10 +30,12 @@
       <h3>Example return:</h3>
       <code>{"stockData":{"stock":"GOOG","price":"786.90","likes":1}}</code><br>
       <code>{"stockData":[{"stock":"MSFT","price":"62.30","rel_likes":-1},{"stock":"GOOG","price":"786.90","rel_likes":1}]}</code>
+      </div>
     </div>
-    <hr style='margin: 50px'>
-    <div id='testui' style='margin-left: 5%'>
-      <h2 style="text-align: left">Front-End:</h2>
+    <button class="user-stories-toggle-button">User Stories</button>
+    <div class="main">
+    <h1>Nasdaq Stock Price Checker</h1>
+    <div id='testui'>
       <h3>Get single price and total likes</h3>
       <form id="testForm2" class="border">
         <input type="text" name="stock" placeholder="goog" style="width: 100px" required=''>
@@ -53,13 +51,25 @@
       </form>
       <code id='jsonResult'></code>
     </div>
-    <hr style='margin: 50px; margin-top: 200px'>
+    </div>
     <!-- Your web-app is https, so your scripts need to be too -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
     <script>
       $(function() {
+        $('.user-stories-toggle-button').on('click', function() {
+          if ($('.user-stories').is(':hidden')) {
+            $('.user-stories-toggle-button').addClass('has-color')
+              .text('Close');
+          } else {
+            $('.user-stories-toggle-button').removeClass('has-color')
+              .text('User Stories');
+          }
+
+          $('.user-stories').animate({ width: 'toggle' }, 400);
+        });
+
         $('#testForm').submit(function(e) {
           $.ajax({
             url: '/api/stock-prices',
