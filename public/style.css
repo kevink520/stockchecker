@@ -211,3 +211,13 @@ button[type="submit"] {
   text-align: center;
 }
 
+button {
+  cursot: pointer;
+  transition: 0.35s;
+}
+
+button:hover,
+button:focus {
+  border-width: 4px;
+}
+
