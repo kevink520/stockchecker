@@ -74,13 +74,6 @@ body {
   color: #333;
 }
 
-.user-stories-toggle-button:hover,
-.user-stories-toggle-button:focus,
-.back-home-button:hover,
-.back-home-button:focus {
-  padding: 6px 27px;;
-}
-
 header,
 h1 {
   width: 100%;
@@ -225,8 +218,6 @@ button {
 
 button:hover,
 button:focus {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  border-width: 3px;
+  box-shadow: inset 1px 1px, inset -1px -1px;
 }
 
