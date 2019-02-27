@@ -74,6 +74,14 @@ body {
   color: #333;
 }
 
+.user-stories-toggle-button:hover,
+.user-stories-toggle-button:focus,
+.back-home-button:hover,
+.back-home-button:focus {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 header,
 h1 {
   width: 100%;
@@ -212,12 +220,14 @@ button[type="submit"] {
 }
 
 button {
-  cursot: pointer;
+  cursor: pointer;
   transition: 0.35s;
 }
 
 button:hover,
 button:focus {
+  padding-top: 6px;
+  padding-bottom: 6px;
   border-width: 4px;
 }
 
