@@ -175,6 +175,10 @@ button[type="submit"] {
   letter-spacing: 0.1em;
 }
 
+small {
+  margin-bottom: 20px;
+}
+
 #result {
   font-size: 20px;
 }
