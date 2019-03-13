@@ -176,6 +176,7 @@ button[type="submit"] {
 }
 
 small {
+  display: block;
   margin-bottom: 20px;
 }
 
