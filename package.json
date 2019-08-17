@@ -7,7 +7,7 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
-		"axios": "^0.18.0",
+		"axios": "^0.18.1",
 		"body-parser": "^1.15.2",
 		"chai": "^3.5.0",
 		"chai-http": "^4.2.1",
@@ -15,6 +15,7 @@
 		"dotenv": "^6.2.0",
 		"express": "^4.14.0",
 		"helmet": "^3.1.0",
+		"lodash": "^4.17.15",
 		"mocha": "^5.2.0",
 		"mongodb": "^3.1.0",
 		"zombie": "^6.1.4"
